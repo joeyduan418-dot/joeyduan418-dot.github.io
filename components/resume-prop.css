@@ -1,0 +1,54 @@
+.view-resume .resume-inspect{display:block;background:#f5e9df;min-height:calc(100svh - 64px);color:#363d41}
+.view-resume.experience-dialog[data-slot=dialog-content]{background:#f5e9df!important}
+.resume-book-experience{--book-width:clamp(190px,22vw,295px);--book-height:calc(var(--book-width) * 1.414);min-height:calc(100svh - 64px);display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(ellipse at 50% 44%,#fff7ef,#f5e9df 72%)}
+.resume-book-stage{width:100%;height:calc(var(--book-height) + 110px);display:grid;place-items:center;perspective:1600px}
+.resume-book{position:relative;width:var(--book-width);height:var(--book-height);transform-style:preserve-3d;transform:rotateX(6deg) rotateY(-7deg) rotateZ(-1deg)}
+.resume-paper-motion{position:absolute;inset:0;transform-style:preserve-3d;transform:translateX(0) translateY(0) translateZ(0) rotateY(0deg);transition:transform .55s cubic-bezier(.4,0,.2,1)}
+.paper-is-out .resume-paper-motion{transform:translateX(0) translateY(-32px) translateZ(145px) rotateY(-360deg);animation:resume-paper-orbit 1s both}
+@keyframes resume-paper-orbit{
+ 0%,12%{transform:translateX(0) translateY(0) translateZ(0) rotateY(0deg);animation-timing-function:cubic-bezier(.25,.2,.45,1)}
+ /* Keep the sheet in the folder's plane until it clears the open edge. */
+ 40%{transform:translateX(calc(var(--book-width) * .98)) translateY(-4px) translateZ(1px) rotateY(0deg);animation-timing-function:cubic-bezier(.3,.1,.55,1)}
+ 66%{transform:translateX(calc(var(--book-width) * .55)) translateY(-24px) translateZ(175px) rotateY(-180deg);animation-timing-function:cubic-bezier(.25,.1,.35,1)}
+ 92%{transform:translateX(0) translateY(-32px) translateZ(150px) rotateY(-350deg);animation-timing-function:ease-out}
+ 100%{transform:translateX(0) translateY(-32px) translateZ(145px) rotateY(-360deg)}
+}
+.resume-book-back,.resume-book-pages,.resume-book-sheet,.resume-book-cover,.resume-cover-face{position:absolute;inset:0;border-radius:5px 10px 10px 5px}
+.resume-book-back{background:#a87a46;border:1px solid #916a3f;border-radius:3px;transform:translateZ(-7px);box-shadow:0 20px 32px #42434a25,0 6px 10px #42434a1c}
+.resume-book-pages{inset:3px -2px 2px 3px;background:repeating-linear-gradient(to bottom,#f8f5ef 0 2px,#d9d6cf 2px 3px);transform:translateZ(-3px);box-shadow:2px 2px 1px #fff9}
+.resume-book-sheet{background:transparent;border:0;padding:0;transform-style:preserve-3d;cursor:zoom-in}
+.resume-sheet-front,.resume-sheet-back{position:absolute;inset:0;display:block;border-radius:4px;background:#fffefb;backface-visibility:hidden;overflow:hidden;box-shadow:0 12px 22px #45454a20,0 2px 3px #45454a15}
+.resume-sheet-front{padding:12px 9px 12px 14px;transform:translateZ(.5px)}
+.resume-sheet-back{transform:rotateY(180deg) translateZ(.5px);background:linear-gradient(110deg,#faf7f0,#fffefb)}
+.resume-sheet-back>span{position:absolute;bottom:18px;right:16px;font-size:7px;letter-spacing:.1em;color:#a5adb0}
+.resume-book-sheet:disabled{cursor:default}
+.resume-book-sheet img{width:100%;height:100%;object-fit:contain;display:block}
+.resume-sheet-hint{position:absolute;left:0;bottom:0;right:0;padding:9px 5px;background:#fffefbf2;color:#526774;font-size:11px;opacity:0;transition:opacity .2s}
+.paper-is-out .resume-book-sheet:hover .resume-sheet-hint,.resume-book-sheet:focus-visible .resume-sheet-hint{opacity:1}
+.resume-book-cover{border:0;background:transparent;padding:0;transform-origin:0 50%;transform-style:preserve-3d;transform:translateZ(3px) rotateY(0deg);transition:transform .18s .35s ease-out;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.paper-is-out .resume-book-cover{transform:translateZ(3px) rotateY(-24deg);transition-delay:0s}
+.resume-cover-face{display:block;backface-visibility:hidden;overflow:visible;border-radius:3px;color:#4b3826;background:radial-gradient(ellipse at 20% 30%,#f9db9c22,transparent 60%),repeating-linear-gradient(17deg,#704f2720 0 .5px,transparent .5px 4px),repeating-linear-gradient(103deg,#fce5ad20 0 .6px,transparent .6px 6px),linear-gradient(105deg,#b08450 0%,#cda168 8%,#d3ad78 75%,#bd945e);border:1px solid #a87b49;box-shadow:inset 2px 0 5px #704d323b,inset -1px 0 1px #efd2a166,0 16px 22px #3b465421;text-align:left}
+.resume-cover-face:before{content:'';position:absolute;left:12px;top:0;bottom:0;width:1px;background:#7b552e66;box-shadow:1px 0 1px #efd1a14d}
+.resume-cover-front:after{content:'RESUME';position:absolute;right:15px;top:-17px;width:34%;height:17px;display:grid;place-items:center;border:1px solid #a87b49;border-bottom:0;border-radius:4px 4px 0 0;background:#c39a62;color:#65482b;font-size:7px;letter-spacing:.14em}
+.resume-cover-front{transform:translateZ(.5px)}
+.resume-cover-inside{transform:rotateY(180deg) translateZ(.5px);background:linear-gradient(100deg,#3e7792,#447f9a 90%,#315d74);box-shadow:inset -10px 0 12px -12px #0e243d99,0 15px 22px #3b465421}
+.resume-cover-mark{position:absolute;left:27px;top:25px;font-size:8px;font-weight:500;letter-spacing:.1em;color:#755936}
+.resume-cover-title{position:absolute;left:27px;right:23px;top:38%;padding-bottom:20px;border-bottom:1px solid #825b3555;font-size:clamp(18px,2vw,28px);font-weight:600;letter-spacing:.03em}
+.resume-cover-title small{display:block;font-size:11px;letter-spacing:.08em;margin-top:12px;font-weight:400;color:#735332}
+.resume-cover-title small>span{display:block;font-size:8px;letter-spacing:.12em;margin-top:8px;color:#80613d}
+.resume-cover-footer{position:absolute;left:27px;right:23px;bottom:25px;display:flex;justify-content:space-between;font-size:6px;letter-spacing:.08em;color:#7a5b37}
+.resume-inside-name{position:absolute;right:22px;bottom:24px;font-size:12px;text-align:right;letter-spacing:.12em}
+.resume-inside-name small{display:block;font-size:6px;letter-spacing:.08em;margin-top:7px;opacity:.7}
+.resume-book-spine{position:absolute;left:-2px;top:0;bottom:0;width:4px;background:#9e7445;transform:translateZ(1px);border-radius:2px;pointer-events:none}
+.resume-book-cover:focus-visible,.resume-book-sheet:focus-visible{outline:2px solid #88b3c6;outline-offset:6px}
+.resume-book-controls{position:relative;z-index:1;margin:0 0 36px;text-align:center;color:#627078}
+@keyframes resume-controls-arrive{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.resume-book-controls p{margin:0 0 20px;font-size:12px;letter-spacing:.04em}
+.resume-book-controls>div{display:flex;align-items:center;justify-content:center;gap:26px}
+.resume-book-controls button,.resume-book-controls a{font-size:13px;border:0;border-bottom:1px solid #85959b66;background:none;padding:6px 0;color:#435761;cursor:pointer;text-decoration:none}
+.resume-book-controls button:hover,.resume-book-controls a:hover{color:#285d79;border-color:currentColor}
+.view-resume .resume-readable{padding:32px 24px;color:#363d41}
+.view-resume .resume-readable a,.view-resume .resume-readable button{color:#395d71}
+@media(max-width:700px){.resume-book-experience{--book-width:clamp(110px,29vw,190px)}.resume-book-stage{height:calc(var(--book-height) + 140px);perspective:1100px}.resume-book-controls{margin-bottom:35px}.resume-book-controls p{font-size:11px}}
+@media(max-width:700px){.resume-cover-mark{left:20px;top:18px;font-size:6px}.resume-cover-title{left:20px;right:12px;padding-bottom:12px;font-size:18px}.resume-cover-title small{font-size:9px;margin-top:8px}.resume-cover-title small>span{font-size:6px;margin-top:5px}.resume-cover-footer{left:20px;right:12px;bottom:18px;font-size:5px}.resume-cover-front:after{right:10px;font-size:6px}}
+@media(prefers-reduced-motion:reduce){.resume-paper-motion,.resume-book-cover{transition:none!important;animation:none!important}}

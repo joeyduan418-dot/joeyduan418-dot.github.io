@@ -1,0 +1,134 @@
+.view-archive .experience-bar{background:#fff!important;color:#39312b!important;border-bottom:1px solid #eee!important}.personal-archive{background:#fff;color:#342c27;min-height:calc(100dvh - 64px);position:relative;overflow:hidden}.archive-heading{text-align:center;padding:36px 20px 0}.personal-archive small{font-size:12px;letter-spacing:.1em}.archive-heading h2,.honor-scene h2{font-size:clamp(26px,3vw,42px);margin:10px 0}.archive-heading p{font-size:16px;color:#847a73}.notebook-composition{max-width:1120px;height:800px;position:relative;margin:-12px auto 0}.notebook-stage{height:380px;width:100%;position:absolute;top:0;touch-action:none;cursor:grab}.notebook-stage:active{cursor:grabbing}.archive-skip{position:absolute;right:40px;top:120px;color:#766a62;font-size:14px;background:none;border-bottom:1px solid #b6aaa0;padding:8px}.falling-photos{position:absolute;inset:270px 100px 60px;pointer-events:none}.life-photo{position:absolute;width:190px;height:245px;padding:9px 9px 0;background:#fcfaf7;border:1px solid #e3ded7;box-shadow:0 12px 22px #42301e22;opacity:0;transform:translateY(-160px) rotate(var(--angle));pointer-events:auto;transition:transform .3s,box-shadow .3s;cursor:zoom-in}.life-photo img{width:100%;height:190px;object-fit:cover}.life-photo span{display:flex;justify-content:space-between;align-items:center;gap:6px;font-size:14px;padding:10px 0}.life-photo small{font-size:10px;white-space:nowrap;letter-spacing:0}.photo-0{left:12%;top:0}.photo-1{left:43%;top:35px}.photo-2{left:70%;top:15px}.photo-3{left:3%;top:225px}.photo-4{left:34%;top:275px}.photo-5{left:66%;top:260px}.photos-released .life-photo{animation:photo-fall .65s var(--delay) both cubic-bezier(.22,.7,.3,1)}.photos-released .life-photo:hover,.photos-released .life-photo:focus-visible{z-index:20;transform:translateY(-15px) rotate(0) scale(1.13)!important;box-shadow:0 24px 48px #42301e35}.life-photo:hover img{object-fit:contain}.ribbon-position{position:absolute;top:230px;left:50%;z-index:25;width:95px;text-align:center;animation:ribbon-reveal .45s both}.medal-ribbon{display:block;margin:auto;width:42px;height:140px;background:repeating-linear-gradient(90deg,#a82230 0 2px,#b72b36 2px 4px,#bd3340 4px 5px);box-shadow:3px 5px 9px #38131c33;clip-path:polygon(0 0,100% 0,100% 100%,50% 88%,0 100%);transform:translateY(var(--pull));transition:transform .3s;cursor:grab;touch-action:none;position:relative}.medal-ribbon.is-dragging{cursor:grabbing;transition:none}.ribbon-stitch{position:absolute;inset:0 5px;border-left:1px dashed #e48d8d;border-right:1px dashed #e48d8d}.ribbon-tag{position:absolute;top:40px;left:0;width:100%;color:white;font-size:12px;line-height:1.8}.ribbon-position p{font-size:12px;margin:9px -30px;color:#91636a}.archive-caption{text-align:center;color:#8b8179;font-size:14px;padding:0 16px 30px}.archive-white-transition{position:fixed;inset:0;background:white;z-index:100;animation:white-wipe .3s both}.honor-scene{min-height:calc(100dvh - 64px);padding:30px 5% 45px;background:radial-gradient(ellipse at 40% 0,#dfb98c66,transparent 60%),#70503a;color:#f9ecdd}.honor-scene>header{max-width:1100px;margin:0 auto 24px}.honor-scene>header button{font-size:14px;border-bottom:1px solid #d8b990;padding:8px 0}.honor-open-book{max-width:1120px;margin:auto;display:grid;grid-template-columns:1fr 1fr;border:12px solid #493021;border-radius:14px;background:#eee1c8;box-shadow:0 20px 50px #27180c66;min-height:540px}.honor-page{padding:26px;background:url('/dossier/book-paper.webp') center/cover;display:flex;flex-direction:column;gap:35px;color:#4f3d2c}.page-0{border-right:1px solid #ac9171;box-shadow:inset -18px 0 22px -20px #553921}.page-1{box-shadow:inset 18px 0 22px -20px #553921}.honor-entry{display:grid;grid-template-columns:52% 1fr;gap:20px;align-items:center;min-height:205px}.honor-entry button{background:#fff9ed;padding:8px;box-shadow:2px 6px 9px #59452b33;transform:rotate(-3deg);transition:transform .25s;cursor:zoom-in}.page-1 .honor-entry button{transform:rotate(3deg)}.honor-entry button:hover{transform:rotate(0) scale(1.04)}.honor-entry img{width:100%;height:165px;object-fit:contain}.honor-entry button span{display:block;font-size:12px;padding-top:7px}.honor-entry h3{font-size:20px;margin:10px 0}.honor-entry p{font-size:14px;line-height:1.8}.honor-pagination{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:25px auto 0;font-size:16px}.honor-pagination button{padding:12px}.honor-pagination button:disabled{opacity:.3}.archive-lightbox{position:fixed!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;width:min(94vw,1100px)!important;max-width:1100px!important;max-height:92dvh!important;background:#fff!important;color:#342c27!important;padding:22px!important;z-index:150!important;display:flex!important;flex-direction:column!important}.archive-lightbox img{width:100%;min-height:0;max-height:72dvh;object-fit:contain}.archive-lightbox button{font-size:14px}.personal-archive button:focus-visible{outline:2px solid #9f3943;outline-offset:5px}@keyframes photo-fall{from{opacity:0;translate:0 -150px;rotate:-5deg}to{opacity:1;translate:0 0;rotate:0deg;transform:rotate(var(--angle))}}@keyframes ribbon-reveal{from{opacity:0;translate:0 -50px}to{opacity:1;translate:0 0}}@keyframes white-wipe{from{opacity:0}to{opacity:1}}
+@media(max-width:700px){.archive-heading{padding-top:24px}.notebook-composition{height:1080px;margin-top:-10px}.notebook-stage{height:310px}.falling-photos{inset:255px 20px 0}.life-photo{width:43%;height:228px}.life-photo img{height:174px}.life-photo span{font-size:12px;display:block}.life-photo small{display:block;margin-top:3px}.photo-0{left:2%;top:0}.photo-1{left:54%;top:40px}.photo-2{left:4%;top:275px}.photo-3{left:54%;top:315px}.photo-4{left:4%;top:555px}.photo-5{left:54%;top:600px}.ribbon-position{top:205px;left:45%;width:40px}.ribbon-position p{display:none}.medal-ribbon{width:32px;height:120px}.ribbon-tag{font-size:10px}.honor-scene{padding:25px 15px}.honor-open-book{grid-template-columns:1fr;border-width:7px}.honor-page{padding:20px;gap:25px}.page-0{border-right:0;border-bottom:1px solid #ac9171}.honor-entry{gap:15px;min-height:180px}.honor-entry img{height:150px}.honor-entry h3{font-size:18px}.archive-skip{right:20px;top:90px}}
+@media(prefers-reduced-motion:reduce){.photos-released .life-photo{animation:none;opacity:1;transform:rotate(var(--angle))}.ribbon-position,.archive-white-transition{animation:none}.archive-white-transition{opacity:1}.personal-archive *{transition:none!important}}
+
+/* A single open-book composition: photographs emerge from its lower page edge. */
+.archive-life .archive-heading,.archive-flash .archive-heading{position:absolute;top:26px;left:35px;z-index:30;padding:0;text-align:left}.archive-life .archive-heading h2,.archive-life .archive-heading p,.archive-flash .archive-heading h2,.archive-flash .archive-heading p{display:none}.notebook-composition{height:1040px;width:min(100%,1120px);margin:0 auto}.notebook-stage{height:550px;top:-25px;z-index:2}.archive-skip{top:40px;right:35px;z-index:30}.falling-photos{inset:330px 0 0;width:850px;max-width:100%;margin:auto;z-index:4;perspective:1100px}.life-photo{width:220px;height:280px;padding:7px 7px 0;border-color:#ded9d3;box-shadow:2px 15px 25px #342a201c;transform:rotate(var(--angle));z-index:var(--layer,1);transform-origin:50% 0}.life-photo img{height:234px}.life-photo span{font-size:14px;padding:8px 3px}.life-photo small{font-size:12px}.photo-0{left:260px;top:-30px;width:235px;height:265px;--layer:6;--start-x:40px;--start-y:-80px}.photo-0 img{height:218px}.photo-1{left:480px;top:80px;width:215px;height:295px;--layer:5;--start-x:-165px;--start-y:-190px}.photo-1 img{height:248px}.photo-2{left:125px;top:140px;width:225px;height:280px;--layer:4;--start-x:185px;--start-y:-250px}.photo-3{left:345px;top:245px;width:220px;height:290px;--layer:3;--start-x:-30px;--start-y:-355px}.photo-3 img{height:243px}.photo-4{left:55px;top:365px;width:200px;height:270px;--layer:2;--start-x:255px;--start-y:-475px}.photo-4 img{height:223px}.photo-5{left:570px;top:395px;width:215px;height:285px;--layer:1;--start-x:-250px;--start-y:-505px}.photo-5 img{height:238px}.photos-released .life-photo{animation:photo-from-book 1.05s var(--delay) both cubic-bezier(.18,.7,.28,1)}.ribbon-position{top:245px;left:73%;z-index:8}.archive-caption{position:relative;margin-top:-20px}.photos-released .life-photo:hover,.photos-released .life-photo:focus-visible{transform:translateY(-20px) rotate(0deg) scale(1.12)!important;z-index:40}.life-photo img{transition:filter .3s}.photos-released .life-photo:hover img{filter:saturate(1.06)}
+@keyframes photo-from-book{0%{opacity:0;transform:translate(var(--start-x),var(--start-y)) rotateX(65deg) rotate(-2deg) scale(.55)}20%{opacity:1}65%{transform:translate(0,12px) rotateX(-8deg) rotate(var(--angle)) scale(1)}100%{opacity:1;transform:translate(0,0) rotateX(0deg) rotate(var(--angle)) scale(1)}}
+@media(max-width:700px){.archive-life .archive-heading,.archive-flash .archive-heading{left:20px;top:24px}.archive-heading small{font-size:12px}.notebook-composition{height:970px}.notebook-stage{top:20px;height:350px;width:140%;left:-20%}.falling-photos{top:260px;left:0;right:0;width:100%;padding:0 15px}.life-photo{width:43%;height:235px}.life-photo img{height:185px}.life-photo span{font-size:14px}.life-photo small{font-size:12px}.photo-0{left:29%;top:0;width:44%;height:228px;--start-x:0px;--start-y:-65px}.photo-0 img{height:179px}.photo-1{left:53%;top:155px;width:41%;height:244px;--start-x:-70px;--start-y:-190px}.photo-1 img{height:194px}.photo-2{left:7%;top:205px;width:42%;height:238px;--start-x:90px;--start-y:-240px}.photo-2 img{height:188px}.photo-3{left:30%;top:380px;width:44%;height:242px;--start-x:0px;--start-y:-410px}.photo-3 img{height:192px}.photo-4{left:4%;top:510px;width:39%;height:220px;--start-x:100px;--start-y:-540px}.photo-4 img{height:170px}.photo-5{left:58%;top:550px;width:38%;height:229px;--start-x:-100px;--start-y:-580px}.photo-5 img{height:179px}.ribbon-position{top:220px;left:82%}.archive-skip{top:50px;right:20px}.life-photo span{padding:5px 0;line-height:1.25}.life-photo small{display:block;margin-top:3px}}
+@media(prefers-reduced-motion:reduce){.photos-released .life-photo{animation:none;opacity:1;transform:rotate(var(--angle))}}
+
+/* Pages release each Polaroid with a slow, weighted slip instead of a UI-card pop. */
+.photos-released .life-photo{
+  transform-origin:50% -24px;
+  will-change:transform,opacity,filter;
+  animation:
+    photo-page-slip 3.6s var(--delay) both cubic-bezier(.16,.58,.2,1),
+    photo-paper-float 5.8s calc(var(--delay) + 3.6s) infinite ease-in-out;
+}
+@keyframes photo-page-slip{
+  0%{opacity:0;filter:blur(1.5px);transform:translate(var(--start-x),calc(var(--start-y) - 28px)) rotateX(72deg) rotate(calc(var(--angle) - 7deg)) scale(.58)}
+  14%{opacity:.2;filter:blur(1px)}
+  38%{opacity:.72;filter:blur(.35px);transform:translate(calc(var(--start-x)*.68),calc(var(--start-y)*.58)) rotateX(32deg) rotate(calc(var(--angle) + 4deg)) scale(.78)}
+  67%{opacity:1;filter:blur(0);transform:translate(calc(var(--start-x)*.24 + 12px),calc(var(--start-y)*.17)) rotateX(8deg) rotate(calc(var(--angle) - 2deg)) scale(.96)}
+  86%{transform:translate(-7px,13px) rotateX(-3deg) rotate(calc(var(--angle) + 1deg)) scale(1.01)}
+  100%{opacity:1;filter:blur(0);transform:translate(0,0) rotateX(0) rotate(var(--angle)) scale(1)}
+}
+@keyframes photo-paper-float{
+  0%,100%{transform:translate3d(0,0,0) rotate(var(--angle))}
+  50%{transform:translate3d(3px,6px,0) rotate(calc(var(--angle) + var(--sway)))}
+}
+@media(prefers-reduced-motion:reduce){.photos-released .life-photo{animation:none;opacity:1;filter:none;transform:rotate(var(--angle))}}
+
+/* Longer medal strap and a more deliberate pull distance. */
+.medal-ribbon{height:calc(145px + var(--archive-pull));min-height:145px}
+.ribbon-position p{margin-top:195px}
+@media(max-width:700px){.medal-ribbon{height:calc(105px + var(--archive-pull));min-height:105px}.ribbon-position p{margin-top:145px}}
+
+/* Pulling the medal is one continuous scene, not a jump between two screens. */
+.ribbon-position{top:235px;left:50%;width:120px;translate:-50% 0;z-index:10}.medal-ribbon{width:54px;height:calc(88px + var(--archive-pull));min-height:88px;margin:0 auto;background:linear-gradient(90deg,#941b2b 0 12%,#c6303c 16% 43%,#9f1f2e 47% 55%,#cf3440 60% 84%,#8f1728 88%);clip-path:none;border-radius:2px 2px 0 0;box-shadow:2px 5px 10px #48142035;transform:none;transition:height .38s cubic-bezier(.2,.72,.25,1);overflow:visible}.medal-ribbon.is-dragging{transition:none}.ribbon-stitch{inset:0 7px;border-color:#ec8c94}.ribbon-copy{position:absolute;left:50%;top:18px;translate:-50% 0;color:#fff;font:12px/1.25 monospace;letter-spacing:.08em;writing-mode:vertical-rl;white-space:nowrap}.medal-ribbon>img{position:absolute;display:block;width:150px;height:150px;object-fit:contain;max-width:none;left:50%;bottom:-126px;translate:-50% 0;opacity:var(--collect);transform:scale(calc(.62 + var(--collect)*.38));transform-origin:50% 10%;filter:drop-shadow(0 12px 12px #33201648);pointer-events:none;transition:opacity .18s,transform .18s}.ribbon-position p{font-size:14px;margin:138px -40px 0;color:#8e4d55}.photos-collecting .life-photo{transform:translate(calc(var(--collect-x)*var(--collect)),calc(var(--collect-y)*var(--collect))) rotate(calc(var(--angle)*(1 - var(--collect)))) scale(calc(1 - var(--collect)*.58))!important;opacity:calc(1 - var(--collect)*.94);filter:blur(calc(var(--collect)*1.3px));transition:transform .12s linear,opacity .12s linear,filter .12s linear;pointer-events:none}.photos-collecting:not(:has(+ .ribbon-position .is-dragging)) .life-photo{transition:transform .38s cubic-bezier(.2,.72,.25,1),opacity .38s,filter .38s}.photos-collecting .life-photo:hover{transform:translate(calc(var(--collect-x)*var(--collect)),calc(var(--collect-y)*var(--collect))) rotate(calc(var(--angle)*(1 - var(--collect)))) scale(calc(1 - var(--collect)*.58))!important}
+.honor-entry button,.page-1 .honor-entry button{background:transparent;padding:0;box-shadow:none;transform:rotate(-1.5deg)}.page-1 .honor-entry button{transform:rotate(1.5deg)}.honor-entry button:hover,.page-1 .honor-entry button:hover{transform:rotate(0) scale(1.025)}.honor-entry img{height:190px;filter:drop-shadow(2px 7px 7px #59452b30)}
+.archive-lightbox[data-slot=dialog-content]{position:fixed!important;inset:0!important;left:0!important;top:0!important;right:0!important;bottom:0!important;margin:auto!important;translate:none!important;transform:none!important;width:min(94vw,1050px)!important;height:min(92dvh,900px)!important;max-width:none!important;max-height:none!important;border-radius:4px!important;padding:18px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:12px!important}.archive-lightbox>img{display:block!important;flex:1 1 auto!important;width:100%!important;height:calc(100% - 76px)!important;max-height:none!important;min-height:0!important;object-fit:contain!important;margin:auto!important}.archive-lightbox>[data-slot=dialog-title]{align-self:flex-start}.archive-lightbox>button{align-self:center}
+@media(max-width:700px){.ribbon-position{top:210px;left:50%}.medal-ribbon{width:42px;height:calc(65px + var(--archive-pull))}.medal-ribbon>img{width:112px;height:112px;bottom:-95px}.ribbon-copy{font-size:12px}.ribbon-position p{margin-top:104px}.photos-collecting .life-photo{transform:translate(calc(var(--collect-x)*var(--collect)*.45),calc(var(--collect-y)*var(--collect)*.72)) rotate(calc(var(--angle)*(1 - var(--collect)))) scale(calc(1 - var(--collect)*.62))!important}}
+@media(prefers-reduced-motion:reduce){.photos-collecting .life-photo{opacity:calc(1 - var(--collect));filter:none}.medal-ribbon>img{transition:none}}
+
+/* 2.5D archive-book refinement */
+.notebook-stage canvas{filter:drop-shadow(0 25px 24px #38271c42);transition:filter .25s}
+.notebook-stage:active canvas{filter:drop-shadow(0 30px 28px #38271c52)}
+.life-photo{padding:10px 10px 39px;background:linear-gradient(145deg,#fff 0%,#f6f1e9 100%);border:1px solid #d9d2c9;box-shadow:0 14px 24px #42301e24,0 1px 0 #fff inset}
+.life-photo:after{content:'';position:absolute;inset:8px 8px auto;height:4px;background:#ffffff8f;pointer-events:none}
+.life-photo img{border:1px solid #d8d2cb;filter:saturate(.91) contrast(1.04)}
+.life-photo span{padding:9px 2px 0;font-family:'KaiTi','STKaiti',serif}
+.life-photo small{font-family:monospace;color:#81766d;letter-spacing:.04em}
+.ribbon-position{left:auto;right:7%;translate:0 0}
+.honor-open-book{position:relative;perspective:1800px}
+.honor-page{position:relative;padding-bottom:44px;cursor:pointer;transition:filter .22s}
+.honor-page:hover{filter:brightness(1.025)}
+.honor-page:focus-visible{outline:3px solid #9f3943;outline-offset:-8px}
+.page-cue{position:absolute;bottom:14px;font:12px/1 monospace;letter-spacing:.08em;color:#7d674f;opacity:.74;pointer-events:none}
+.page-cue.previous{left:26px}.page-cue.next{right:26px}
+.honor-turn-leaf{position:absolute;top:0;bottom:0;width:50%;z-index:20;background:url('/dossier/book-paper.webp') center/cover;box-shadow:0 0 30px #3d281b40;pointer-events:none;transform-style:preserve-3d;backface-visibility:visible}
+.turn-next .honor-turn-leaf{right:0;transform-origin:left center;animation:turn-page-next .43s cubic-bezier(.55,.08,.28,.95)}
+.turn-prev .honor-turn-leaf{left:0;transform-origin:right center;animation:turn-page-prev .43s cubic-bezier(.55,.08,.28,.95)}
+.honor-page-status{max-width:1100px;margin:20px auto 0;text-align:center;font-size:14px;color:#ead5bd}
+.honor-page-status span{margin-left:16px;font-family:monospace;letter-spacing:.12em}
+@keyframes turn-page-next{0%{transform:rotateY(0);filter:brightness(1)}50%{filter:brightness(.82)}100%{transform:rotateY(-180deg);filter:brightness(1)}}
+@keyframes turn-page-prev{0%{transform:rotateY(0);filter:brightness(1)}50%{filter:brightness(.82)}100%{transform:rotateY(180deg);filter:brightness(1)}}
+@media(max-width:700px){.ribbon-position{left:auto;right:4%;translate:0 0}.honor-page{padding-bottom:40px}.page-cue{font-size:11px}.honor-page-status{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.honor-turn-leaf{display:none}.notebook-stage canvas{transition:none}}
+
+/* Soft contemporary scrapbook direction */
+.personal-archive{background:radial-gradient(circle at 50% 16%,#fff 0 24%,transparent 55%),linear-gradient(180deg,#f8f6f1,#f3f1ed);color:#3f454b}
+.view-archive .experience-bar{background:#fbfaf7f2!important;color:#464b50!important;border-bottom-color:#d8d5cf!important}
+.notebook-stage canvas{filter:drop-shadow(0 22px 20px #59636d2b)}
+.photos-released .life-photo{animation:photo-soft-drift 2.15s var(--delay) both cubic-bezier(.18,.63,.25,1)}
+.life-photo{background:#fff;border-color:#dedede;box-shadow:0 18px 30px #50606c20,0 1px 0 #fff inset}
+.life-photo span{color:#4b5156}.life-photo small{color:#899097}
+.ribbon-position p{color:#b05661}.archive-caption{color:#777e84}
+.honor-scene{background:radial-gradient(circle at 50% 0,#ffffff 0 24%,transparent 62%),linear-gradient(145deg,#ebe9e4,#f7f5f1);color:#474d52}
+.honor-scene>header button{border-bottom-color:#c97570;color:#8d4d4b}
+.honor-open-book{border-color:#c9786d;background:#e9ded4;box-shadow:0 24px 55px #59636d2d}
+.honor-page,.honor-turn-leaf{background-color:#fffefa;background-image:linear-gradient(#a9bfce22 1px,transparent 1px),linear-gradient(90deg,#a9bfce22 1px,transparent 1px);background-size:24px 24px;color:#4b5156}
+.page-0{border-right-color:#d6c8bd;box-shadow:inset -18px 0 22px -20px #786e66}.page-1{box-shadow:inset 18px 0 22px -20px #786e66}
+.page-cue{color:#9b5d59}.honor-page-status{color:#71777c}
+@keyframes photo-soft-drift{0%{opacity:0;transform:translate(var(--start-x),calc(var(--start-y) - 75px)) rotateX(20deg) rotate(calc(var(--angle) - 5deg)) scale(.72)}18%{opacity:.35}45%{opacity:.82;transform:translate(calc(var(--start-x)*.48 + 18px),calc(var(--start-y)*.48)) rotateX(8deg) rotate(calc(var(--angle) + 3deg)) scale(.9)}76%{opacity:1;transform:translate(-10px,14px) rotateX(0) rotate(calc(var(--angle) - 1deg)) scale(1)}100%{opacity:1;transform:translate(0,0) rotateX(0) rotate(var(--angle)) scale(1)}}
+@media(prefers-reduced-motion:reduce){.photos-released .life-photo{animation:none;opacity:1;transform:rotate(var(--angle))}}
+
+/* Current archive sequence: fixed top binding, click-to-open, hanging photographs. */
+.personal-archive{background:#fff}
+.notebook-composition{width:min(100%,1050px);height:960px}
+.hanging-notebook{top:0;height:460px;width:100%;left:0;cursor:default;z-index:5}
+.hanging-notebook.book-waiting{cursor:pointer}
+.hanging-notebook.book-started{pointer-events:none}
+.hanging-notebook canvas{display:block;width:100%;height:100%}
+.book-open-hint{position:absolute;top:455px;left:0;right:0;text-align:center;font-size:15px;color:#756858;z-index:7;pointer-events:none}
+.falling-photos{top:320px;width:760px;overflow:visible;z-index:4;clip-path:inset(0 -120px -160px)}
+.life-photo{width:180px!important;height:220px!important;padding:8px 8px 34px}
+.life-photo img{height:174px!important}
+.life-photo span{font-size:13px;gap:3px}.life-photo small{font-size:10px}
+.photo-0{left:150px;top:0;--start-x:20px;--start-y:-220px}
+.photo-1{left:400px;top:45px;--start-x:-20px;--start-y:-265px}
+.photo-2{left:40px;top:180px;--start-x:80px;--start-y:-400px}
+.photo-3{left:285px;top:240px;--start-x:-10px;--start-y:-460px}
+.photo-4{left:140px;top:405px;--start-x:50px;--start-y:-625px}
+.photo-5{left:515px;top:370px;--start-x:-100px;--start-y:-590px}
+.photos-released .life-photo{animation:archive-photo-slip 3.8s var(--delay) both linear,photo-paper-float 6s calc(var(--delay) + 3.8s) infinite ease-in-out;transform-origin:50% 0;will-change:transform}
+@keyframes archive-photo-slip{
+  0%{opacity:1;transform:translate(var(--start-x),var(--start-y)) rotateX(12deg) rotate(calc(var(--angle) - 4deg))}
+  28%{opacity:1;transform:translate(calc(var(--start-x)*.85),calc(var(--start-y)*.78)) rotateX(-6deg) rotate(calc(var(--angle) + 3deg))}
+  60%{opacity:1;transform:translate(calc(var(--start-x)*.45),calc(var(--start-y)*.4)) rotateX(5deg) rotate(calc(var(--angle) - 2deg))}
+  85%{opacity:1;transform:translate(5px,calc(var(--start-y)*.08)) rotateX(-2deg) rotate(calc(var(--angle) + 1deg))}
+  100%{opacity:1;transform:translate(0,0) rotate(var(--angle))}
+}
+.photos-collecting .life-photo{animation:none!important;opacity:calc(1 - var(--collect)*.94)!important}
+.ribbon-position{top:305px;right:12%;left:auto;z-index:8}
+.medal-ribbon{height:calc(155px + var(--archive-pull));min-height:155px}
+.ribbon-position p{margin-top:140px}
+.certificate-curl{position:absolute;inset:0;z-index:30;pointer-events:none}
+.certificate-curl canvas{display:block;width:100%;height:100%}
+.honor-open-book.is-turning{isolation:isolate}
+@media(max-width:700px){
+ .hanging-notebook{height:350px;width:100%;left:0;top:15px}
+ .book-open-hint{top:300px}.notebook-composition{height:1100px}
+ .falling-photos{top:255px;width:100%;clip-path:inset(0 -15px -140px)}
+ .life-photo{width:40%!important;height:215px!important}.life-photo img{height:164px!important}
+ .photo-0{left:10%;top:0}.photo-1{left:53%;top:100px}.photo-2{left:5%;top:255px}.photo-3{left:52%;top:350px}.photo-4{left:8%;top:520px}.photo-5{left:53%;top:620px}
+ .ribbon-position{top:245px;right:4%;width:50px}.medal-ribbon{width:36px}
+ .honor-open-book{grid-template-columns:1fr 1fr}.honor-entry{display:block;min-height:0}.honor-page{padding:12px 10px 35px}.honor-entry img{height:135px}.honor-entry h3{font-size:16px}.honor-entry p{font-size:12px}.honor-entry small{font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){.photos-released .life-photo{animation:none;opacity:1;transform:rotate(var(--angle))}}
+
+/* The next reverse page is laid out at the same size before its texture is captured. */
+.honor-turn-preview{position:absolute!important;top:0;bottom:0;width:50%;visibility:hidden;pointer-events:none!important;overflow:hidden}.honor-turn-preview.page-0{left:0}.honor-turn-preview.page-1{right:0}.honor-open-book.is-turning>.honor-page:not(.honor-turn-preview){pointer-events:none;filter:none}.honor-open-book.is-turning .honor-entry button{transition:none}.certificate-curl{overflow:visible}.honor-open-book>.page-cue{z-index:2}
+
+.honor-open-book.is-turning .page-0 .honor-entry button{transform:rotate(-1.5deg)}.honor-open-book.is-turning .page-1 .honor-entry button{transform:rotate(1.5deg)}

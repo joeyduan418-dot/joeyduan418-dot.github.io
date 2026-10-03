@@ -1,0 +1,1 @@
+Official sources: https://github.com/google/fonts/tree/main/ofl/inter and https://github.com/google/fonts/tree/main/ofl/notosanssc. WOFF2 subsets supplied by the official Google Fonts CSS API. Fonts are locally hosted; browsers make no external font requests. Regenerate after adding UI characters with python scripts/prepare-ui-fonts.py. See bundled OFL licenses.

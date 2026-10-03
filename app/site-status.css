@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Status Fredoka';
+  src: url('/fonts/fredoka-status.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+.site-status {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  min-height: 100svh;
+  overflow: hidden;
+  color: #fcfdfb;
+  background: radial-gradient(ellipse at 50% 45%, #152020, #101819 75%);
+  isolation: isolate;
+}
+.site-status::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' filter='url(%23n)' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
+}
+.site-status-center { text-align: center; padding: 24px; }
+.site-status .site-status-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin: 0;
+  font-family: 'Status Fredoka', sans-serif !important;
+  font-size: clamp(54px, 9vw, 142px);
+  font-weight: 700 !important;
+  line-height: 1.12;
+  letter-spacing: -.035em !important;
+  color: #fcfdfb;
+  text-shadow: 0 2px 0 #dee4e4, 0 8px 28px #0002;
+}
+.site-status-title > span { display: inline-block; opacity: 0; transform: translateY(12px) scale(.85); }
+.site-status-title > .letter-visible { opacity: 1; transform: none; animation: status-letter-in .38s cubic-bezier(.2,.8,.3,1.15) both; }
+.site-status-offline .site-status-title > span:last-child { transform-origin: 50% 90%; animation: status-question-in .42s cubic-bezier(.2,.8,.3,1.15) both; }
+.site-status .site-status-message { margin: 24px 0 0; font-size: clamp(17px, 2vw, 26px); font-weight: 700; letter-spacing: .08em; animation: status-caption-in .3s .25s both; }
+.site-status .site-status-retry { display: inline-flex; gap: 14px; align-items: center; margin-top: 24px; padding: 0 0 7px; color: #18eff4; border: 0; border-bottom: 3px solid currentColor; border-radius: 0; background: none; font-size: clamp(18px, 2vw, 26px); font-weight: 700; letter-spacing: .06em; cursor: pointer; animation: status-caption-in .25s .4s both; }
+.site-status-retry span { transition: transform .2s; }
+.site-status-retry:hover span { transform: translate(3px,-3px); }
+.site-status-retry:focus-visible { outline: 2px solid #18eff4; outline-offset: 7px; }
+.site-status-progress { position: absolute; left: clamp(24px, 4vw, 68px); bottom: clamp(30px, 5vh, 56px); color: #18eff4; font-size: clamp(20px, 2vw, 30px); font-weight: 700; font-variant-numeric: tabular-nums; }
+.site-status-leaving { animation: status-reveal .6s ease-in-out both; pointer-events: none; }
+.site-status-leaving .site-status-title { animation: status-welcome-out .6s ease-in-out both; }
+@keyframes status-letter-in { 0% { opacity: 0; transform: translateY(12px) scale(.85); } 65% { opacity: 1; transform: translateY(-3px) scale(1.035); } 100% { opacity: 1; transform: none; } }
+@keyframes status-question-in { 0% { opacity: 0; transform: translateY(-18px) rotate(12deg); } 65% { opacity: 1; transform: translateY(2px) rotate(-4deg); } 100% { opacity: 1; transform: none; } }
+@keyframes status-caption-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes status-reveal { 0%, 15% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes status-welcome-out { to { opacity: 0; transform: translateY(-12px) scale(.98); } }
+@media (max-width: 600px) { .site-status .site-status-title { font-size: clamp(44px, 12vw, 72px); } }
+@media (prefers-reduced-motion: reduce) { .site-status, .site-status *, .site-status-title > .letter-visible { animation: none !important; transition: none !important; } }

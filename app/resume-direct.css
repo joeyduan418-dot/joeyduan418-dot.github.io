@@ -1,0 +1,3 @@
+.view-resume .resume-inspect{animation:resume-direct .18s ease-out both}
+@keyframes resume-direct{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.view-resume .resume-inspect{animation:none}}

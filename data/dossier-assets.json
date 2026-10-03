@@ -1,0 +1,120 @@
+{
+  "interior": [
+    {
+      "source": "厨房.jpg",
+      "src": "/dossier/room-0.webp"
+    },
+    {
+      "source": "微信图片_20250220120247.png",
+      "src": "/dossier/room-1.webp"
+    },
+    {
+      "source": "微信图片_20250220120301.png",
+      "src": "/dossier/room-2.webp"
+    },
+    {
+      "source": "微信图片_20250220123526.png",
+      "src": "/dossier/room-3.webp"
+    },
+    {
+      "source": "微信图片_20250220123711.png",
+      "src": "/dossier/room-4.webp"
+    },
+    {
+      "source": "微信图片_20250220123732.png",
+      "src": "/dossier/room-5.webp"
+    },
+    {
+      "source": "微信图片_20250220125447.png",
+      "src": "/dossier/room-6.webp"
+    },
+    {
+      "source": "玄关.jpg",
+      "src": "/dossier/room-7.webp"
+    },
+    {
+      "source": "餐厅厨房.jpg",
+      "src": "/dossier/room-8.webp"
+    }
+  ],
+  "stage": [
+    {
+      "source": "丝路逐梦",
+      "title": "丝路逐梦",
+      "gallery": [
+        "/dossier/stage-0-0.webp",
+        "/dossier/stage-0-1.webp",
+        "/dossier/stage-0-2.webp"
+      ]
+    },
+    {
+      "source": "梨园绘",
+      "title": "梨园汇",
+      "gallery": [
+        "/dossier/stage-1-0.webp",
+        "/dossier/stage-1-1.webp",
+        "/dossier/stage-1-2.webp",
+        "/dossier/stage-1-3.webp",
+        "/dossier/stage-1-4.webp",
+        "/dossier/stage-1-5.webp",
+        "/dossier/stage-1-6.webp"
+      ]
+    },
+    {
+      "source": "乡村振兴",
+      "title": "乡村振兴",
+      "gallery": [
+        "/dossier/stage-2-0.webp",
+        "/dossier/stage-2-1.webp",
+        "/dossier/stage-2-2.webp"
+      ]
+    },
+    {
+      "source": "白蛇传",
+      "title": "白蛇传",
+      "gallery": [
+        "/dossier/stage-3-0.webp",
+        "/dossier/stage-3-1.webp",
+        "/dossier/stage-3-2.webp",
+        "/dossier/stage-3-3.webp"
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "title": "湘味江湖",
+      "src": "/dossier/ai-channel-1.mp4"
+    },
+    {
+      "title": "张家界酒宣传片",
+      "src": "/dossier/ai-channel-2.mp4?v=e069165bae27"
+    },
+    {
+      "title": "这不是剪纸展厅设计",
+      "src": "/dossier/ai-channel-3.mp4?v=2feb42c2c0a3"
+    },
+    {
+      "title": "西游神话成片",
+      "src": "/dossier/ai-channel-4.mp4"
+    },
+    {
+      "title": "10s练习",
+      "src": "/dossier/ai-channel-5.mp4"
+    }
+  ],
+  "honors": [
+    "/dossier/honor-0.webp",
+    "/dossier/honor-1.webp",
+    "/dossier/honor-2.webp",
+    "/dossier/honor-3.webp",
+    "/dossier/honor-4.webp",
+    "/dossier/honor-5.webp",
+    "/dossier/honor-6.webp",
+    "/dossier/honor-7.webp",
+    "/dossier/honor-8.webp",
+    "/dossier/honor-9.webp",
+    "/dossier/honor-10.webp",
+    "/dossier/honor-11.webp",
+    "/dossier/honor-12.webp"
+  ]
+}

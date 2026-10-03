@@ -1,0 +1,45 @@
+/* Shared modern type system. Brand lettering inside artwork stays untouched. */
+:root{
+ --font-ui:"Inter","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+ --font-display:var(--font-ui);
+}
+body{font-family:var(--font-ui);font-optical-sizing:auto;-webkit-font-smoothing:antialiased}
+:is(.workbench,.experience-dialog,.computer-camera,.computer-soft-entry,.archive-lightbox),
+:is(.workbench,.experience-dialog,.computer-camera,.computer-soft-entry,.archive-lightbox) *{
+ font-family:var(--font-ui)!important;
+ font-optical-sizing:auto;
+}
+:is(.workbench,.experience-dialog,.archive-lightbox) :is(h1,h2,h3){
+ font-weight:600!important;
+ font-style:normal!important;
+ letter-spacing:-.025em!important;
+}
+.workbench .desk-caption h1{font-weight:600;letter-spacing:-.035em;line-height:1.3}
+.workbench .desk-caption p{font-size:13px;letter-spacing:.01em;line-height:1.9}
+.desk-header>span{font-weight:600;letter-spacing:.015em}
+.desk-header small{font-weight:500;letter-spacing:.1em}
+.desk-caption small{font-weight:500;letter-spacing:.14em}
+.desk-footer,.desk-hotspot>span{font-weight:400;letter-spacing:.01em}
+.experience-bar{font-weight:500;letter-spacing:.035em}
+.experience-bar button,.desk-header button,.desk-footer button{font-weight:500}
+.experience-bar>span{letter-spacing:.09em;font-size:10px}
+.retro-desktop .desktop-folders strong{font-weight:500;letter-spacing:.015em}
+.retro-desktop .desktop-folders small{font-weight:400;letter-spacing:.07em;font-variant-numeric:tabular-nums}
+.desktop-taskbar{font-weight:400}
+.archive-heading h2,.honor-scene h2,.theatre-heading h2,.theatre-detail h2,.home-loading h2{font-weight:600;letter-spacing:-.025em}
+.honor-entry h3{font-weight:600;letter-spacing:-.01em}
+.honor-entry p{font-weight:400;line-height:1.8}
+.life-photo span{font-weight:500;letter-spacing:.01em}
+.life-photo small{font-weight:400;letter-spacing:.05em}
+.contact-intro h1{font-weight:600;letter-spacing:-.035em}
+.contact-intro>p,.contact-conversation>p{letter-spacing:.025em}
+.contact-hello{font-weight:600!important;font-style:normal!important;letter-spacing:-.065em}
+.contact-hello>span{font-weight:500;letter-spacing:.02em}
+.contact-letter h2{font-weight:600;letter-spacing:-.02em}
+.contact-letter-message{font-weight:400;letter-spacing:.015em}
+.contact-letter-signature strong{font-weight:600;font-size:21px;letter-spacing:.02em}
+.contact-letter-row>a,.contact-address-value{font-weight:500;letter-spacing:0;font-variant-numeric:tabular-nums}
+.contact-eyebrow,.contact-line-label,.contact-letter-to,.contact-letter-top>span{font-weight:500;letter-spacing:.1em}
+.theatre-heading small,.theatre-detail header small,.home-loading>small{font-weight:500;letter-spacing:.14em}
+.honor-page-status,.home-loading-label,.video-archive-channels{font-variant-numeric:tabular-nums}
+@media(max-width:700px){.experience-bar>span{font-size:9px;letter-spacing:.04em}.desk-caption small{letter-spacing:.09em}}
