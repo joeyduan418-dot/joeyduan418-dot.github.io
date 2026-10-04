@@ -8,7 +8,7 @@ export default function useDeskMusic(enabled: boolean, paused: boolean) {
   const preference = useRef({enabled, paused});
 
   useEffect(() => {
-    const audio = new Audio('/audio/quiet-desk.wav');
+    const audio = new Audio('/audio/quiet-desk.mp3');
     audio.loop = true;
     audio.preload = 'auto';
     audio.volume = .38;

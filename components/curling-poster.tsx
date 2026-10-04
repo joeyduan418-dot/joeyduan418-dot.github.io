@@ -32,7 +32,7 @@ export default function CurlingPoster({phase}:{phase:'wind'|'curl'|'flight'}){
    <linearGradient id={`${id}-paper`} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#8b704b"/><stop offset=".24" stopColor="#d2b989"/><stop offset=".53" stopColor="#f8e7be"/><stop offset=".78" stopColor="#e5cfa0"/><stop offset="1" stopColor="#b79a6b"/></linearGradient>
    <filter id={`${id}-shadow`} x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="-6" dy="-8" stdDeviation="7" floodColor="#100b06" floodOpacity=".42"/></filter>
   </defs>
-  <image href="/dossier/poster-original-4.png" width="640" height="950" preserveAspectRatio="xMidYMid slice" clipPath={`url(#${id}-front)`}/>
+  <image href="/dossier/poster-original-4.webp" width="640" height="950" preserveAspectRatio="xMidYMid slice" clipPath={`url(#${id}-front)`}/>
   <g style={{opacity:'var(--curl-opacity,0)'}}>
    <path data-back fill={`url(#${id}-paper)`} filter={`url(#${id}-shadow)`}/>
    <path data-crease fill="none" stroke="#fff1ce" strokeWidth="1.3" opacity=".55"/>

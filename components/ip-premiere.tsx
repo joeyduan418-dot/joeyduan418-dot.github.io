@@ -54,7 +54,7 @@ export default function IpPremiere({onComplete}:{onComplete:()=>void}){
   <div className="ip-board-grain" aria-hidden="true"/>
   <div className="ip-board-heading"><small>WANTED · CHARACTER FILE 02</small><h2>湘味五侠</h2><p>一阵风，吹开江湖的序章</p></div>
   <div className="ip-board-posters">{Array.from({length:5},(_,i)=><div className={`ip-board-poster ip-board-poster-${i}`} key={i}>
-   {i===4?<CurlingPoster phase={phase}/>:<img src={`/dossier/poster-original-${i}.png`} alt={`湘味五侠角色海报 ${i+1}`}/>}
+   {i===4?<CurlingPoster phase={phase}/>:<img src={`/dossier/poster-original-${i}.webp`} alt={`湘味五侠角色海报 ${i+1}`}/>}
    <i className="ip-thumbtack" aria-hidden="true"/>
   </div>)}</div>
   <div ref={sheet} className="ip-flying-sheet" aria-hidden="true">{phase==='flight'&&<CurlingPoster phase="flight"/>}</div>

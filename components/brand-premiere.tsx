@@ -3,7 +3,7 @@ import {useEffect,useRef,useState,type ReactNode} from 'react';
 import './brand-premiere.css';
 
 // User-requested preview of the enhanced artwork; the original asset is retained.
-const brandArtwork='/dossier/brand-premiere-enhanced.png';
+const brandArtwork='/dossier/brand-premiere-enhanced.webp';
 
 export default function BrandPremiere({children}:{children:ReactNode}){
  const canvas=useRef<HTMLCanvasElement>(null),reading=useRef<HTMLDivElement>(null),finish=useRef(false);

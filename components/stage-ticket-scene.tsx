@@ -4,7 +4,7 @@ import assets from '../data/dossier-assets.json';
 
 export const ticketColors=['#bec09a','#e7bf7e','#c9b77d','#bdcbc4'];
 export const ticketSubtitles=['SILK ROAD DREAM','CHINESE OPERA','RURAL REVIVAL','THE WHITE SNAKE'];
-export const ticketArtwork=['/dossier/ticket-user-silk-transparent.png','/dossier/ticket-user-opera-transparent.png','/dossier/ticket-user-rural-transparent.png','/dossier/ticket-user-snake-transparent.png'];
+export const ticketArtwork=['/dossier/ticket-user-silk-transparent.webp','/dossier/ticket-user-opera-transparent.webp','/dossier/ticket-user-rural-transparent.webp','/dossier/ticket-user-snake-transparent.webp'];
 
 function ticketTexture(title:string,index:number,art:HTMLImageElement){
  const c=document.createElement('canvas');c.width=1400;c.height=700;

@@ -2,6 +2,7 @@
 import {useEffect,useRef,useState,type CSSProperties} from 'react';
 import './interior-experience.css';
 import InteriorHouseModel from './interior-house-model';
+import {preloadImage} from './experience-preload';
 
 const rooms=[
  {name:'玄关',image:7,zone:[35,83,26,13]},
@@ -21,21 +22,30 @@ export default function InteriorExperience(){
  const roomRequest=useRef(0);
  const heading=useRef<HTMLHeadingElement>(null);
  const mapButton=useRef<HTMLButtonElement>(null);
+ const firstReady=useRef(false);
+ useEffect(()=>{
+  let disposed=false;
+  const image=new Image();image.src='/dossier/room-7.webp';
+  void image.decode().then(()=>{if(!disposed)firstReady.current=true}).catch(()=>{if(!disposed)setFailed(true)});
+  return()=>{disposed=true};
+ },[]);
  useEffect(()=>{
   if(!modelReady)return;
-  let disposed=false,frame=0,start=0,ready=false;
-  const first=new Image();first.src='/dossier/room-7.webp';
-  first.decode().then(()=>{ready=true}).catch(()=>{if(!disposed)setFailed(true)});
+  let frame=0,start=0;
   const tick=(now:number)=>{
    if(!start)start=now;
    const elapsed=now-start;
-   const value=Math.min(ready?100:95,Math.floor(elapsed/40));setProgress(value);
+   const value=Math.min(firstReady.current?100:95,Math.floor(elapsed/40));setProgress(value);
    if(value===100 && elapsed>=4300){setEntered(true);return;}
    frame=requestAnimationFrame(tick);
   };
   frame=requestAnimationFrame(tick);
-  return()=>{disposed=true;cancelAnimationFrame(frame)};
+  return()=>cancelAnimationFrame(frame);
  },[modelReady]);
+ useEffect(()=>{
+  if(!entered)return;
+  for(const index of [room-1,room+1])if(rooms[index])void preloadImage(`/dossier/room-${rooms[index].image}.webp`);
+ },[entered,room]);
  useEffect(()=>{if(entered)heading.current?.focus()},[entered]);
  useEffect(()=>()=>{roomRequest.current++},[]);
  const current=rooms[room];
@@ -77,7 +87,7 @@ export default function InteriorExperience(){
     <header><div><small>FLOOR PLAN</small><h3>你想走进哪个空间？</h3></div><button onClick={()=>{setGuideOpen(false);mapButton.current?.focus()}} aria-label="收起平面导览">×</button></header>
     <div className="home-map-drawing">
      {/* eslint-disable-next-line @next/next/no-img-element */}
-     <img src="/dossier/interior-floor-plan.png" alt="住宅真实平面布置图"/>
+     <img src="/dossier/interior-floor-plan.webp" alt="住宅真实平面布置图"/>
      {rooms.map((r,index)=>{const [x,y,w,h]=r.zone;return <button key={r.name} className="home-map-region" style={{left:`${x}%`,top:`${y}%`,width:`${w}%`,height:`${h}%`} as CSSProperties} aria-pressed={room===index} onClick={()=>void change(index)}><span>{r.name}</span></button>})}
     </div>
     <nav aria-label="选择房间">{rooms.map((r,index)=><button key={r.name} aria-pressed={room===index} onClick={()=>void change(index)}>{r.name}</button>)}</nav>

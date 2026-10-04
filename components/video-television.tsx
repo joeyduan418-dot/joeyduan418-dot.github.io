@@ -34,7 +34,7 @@ export default function VideoTelevision({videos,muted=false}:{videos:{title:stri
  return <section className="video-archive" aria-label="AI 视频电视机">
   <div className="video-archive-tv">
    {/* eslint-disable-next-line @next/next/no-img-element */}
-   <img className="video-archive-shell" src="/dossier/ai-television-mockup.png" alt="DJY 复古银色电视机，带像素贴纸" draggable={false}/>
+   <img className="video-archive-shell" src="/dossier/ai-television-mockup.webp" alt="DJY 复古银色电视机，带像素贴纸" draggable={false}/>
    <div className={`video-archive-screen ${channel<0?'is-idle':''}`}>
     {channel<0?<div className="video-archive-idle"><TelevisionStatic/><span>DJY VIDEO ARCHIVE</span><strong>请选择频道</strong><small>按下机身上的 01 — 05</small></div>:<video key={videos[channel].src} src={videos[channel].src} controls autoPlay muted={muted} playsInline preload="metadata" aria-label={videos[channel].title}/>}
    </div>
