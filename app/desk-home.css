@@ -38,3 +38,6 @@
  .desk-explore-hint svg{width:18px;height:28px}
 }
 @media(max-width:420px){.desk-header-actions{flex-basis:100%;justify-content:space-between}.desk-header-actions nav{gap:20px}}
+
+/* Touch screens open desk objects with a single tap. */
+.desk-hotspot { touch-action: manipulation; }
