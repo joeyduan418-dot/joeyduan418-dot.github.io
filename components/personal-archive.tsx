@@ -69,6 +69,6 @@ export default function PersonalArchive(){
    <p className="honor-page-status">点击书页翻阅 <span>{spread+1} / {count}</span></p>
   </div>}
   {phase==='flash'&&<div className="archive-white-transition" aria-label="正在翻到荣誉证书"/>}
-  <Dialog open={!!selected} onOpenChange={o=>!o&&setSelected(null)}><DialogContent className="archive-lightbox"><DialogTitle>{selected?.title}</DialogTitle>{selected&&<img src={selected.src} alt={selected.title}/>}<button onClick={()=>setSelected(null)}>← 返回{phase==='honors'?'证书册':'生活相册'}</button></DialogContent></Dialog>
+  <Dialog open={!!selected} onOpenChange={o=>!o&&setSelected(null)}><DialogContent positioning="custom" className="archive-lightbox"><DialogTitle>{selected?.title}</DialogTitle>{selected&&<img src={selected.src} alt={selected.title}/>}<button onClick={()=>setSelected(null)}>← 返回{phase==='honors'?'证书册':'生活相册'}</button></DialogContent></Dialog>
  </section>
 }
